@@ -12,20 +12,17 @@ export default function Home() {
           height={38}
           priority
         />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            The future of healthcare is coming{" "}
-          </li>
-        </ol>
-
+        <h1 className="text-xl sm:text-2xl font-semibold tracking-tight text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+          The future of health is coming
+        </h1>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+
+      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center text-sm text-center">
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="mailto:info@ourovance.com"
+          className="hover:underline hover:underline-offset-4"
         >
+          info@ourovance.com
         </a>
       </footer>
     </div>
