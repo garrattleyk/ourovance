@@ -3,6 +3,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  
+  /* Health/Wellness Color Palette */
+  --primary-blue: #2563eb;
+  --primary-blue-dark: #1d4ed8;
+  --secondary-blue: #3b82f6;
+  --accent-green: #10b981;
+  --accent-green-light: #34d399;
+  --soft-gray: #f8fafc;
+  --soft-gray-dark: #e2e8f0;
+  --text-gray: #64748b;
+  --text-dark: #1e293b;
 }
 
 @theme inline {
@@ -14,8 +25,12 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #0f172a;
+    --foreground: #f1f5f9;
+    --soft-gray: #1e293b;
+    --soft-gray-dark: #334155;
+    --text-gray: #94a3b8;
+    --text-dark: #f1f5f9;
   }
 }
 
@@ -23,4 +38,48 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Smooth animations and transitions */
+* {
+  transition: all 0.3s ease;
+}
+
+/* Hero gradient background */
+.hero-gradient {
+  background: linear-gradient(135deg, 
+    var(--primary-blue) 0%, 
+    var(--secondary-blue) 35%, 
+    var(--accent-green) 100%);
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+/* Subtle hover animations */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
 }
